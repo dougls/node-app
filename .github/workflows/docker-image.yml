@@ -26,6 +26,7 @@ jobs:
           aws lambda invoke \
             --function-name teste \
             --invocation-type Event \
-            --payload '{"key1": "value1","key2": "value2","key3": "value3"}' \
+            --cli-binary-format raw-in-base64-out \
+            --payload '{ "key1": "value1", "key2": "value2", "key3": "value3" }' \
             response.json
           
