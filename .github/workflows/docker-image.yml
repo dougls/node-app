@@ -24,5 +24,7 @@ jobs:
       - name: Deploy to Lambda
         run: |
           aws lambda invoke \
-            --function-name arn:aws:lambda:us-east-1:637423298858:function:teste
+            --function-name teste \
+            --payload '{"teste": "teste"}' \
+            response.json
           
