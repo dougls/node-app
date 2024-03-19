@@ -25,6 +25,7 @@ jobs:
         run: |
           aws lambda invoke \
             --function-name teste \
-            --payload '{"teste": "teste"}' \
+            --invocation-type Event \
+            --payload '{"key1": "value1","key2": "value2","key3": "value3"}' \
             response.json
           
